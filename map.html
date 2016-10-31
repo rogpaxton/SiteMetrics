@@ -1,0 +1,312 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_df06907821544c1fa2216c5045292158 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_df06907821544c1fa2216c5045292158" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_df06907821544c1fa2216c5045292158 = L.map('map_df06907821544c1fa2216c5045292158', {
+                                           center:[0,0],
+                                           zoom: 1,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_c48090cb62fc49f0aba4c736458c6edc = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_df06907821544c1fa2216c5045292158);
+
+        
+        
+            
+
+            var marker_042981549ff747cc99532e287149f28b = L.marker(
+                [30.37,-97.74],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_df06907821544c1fa2216c5045292158);
+            
+        
+            
+
+                var icon_8bf14048c81b422db5339011a8939e27 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_042981549ff747cc99532e287149f28b.setIcon(icon_8bf14048c81b422db5339011a8939e27);
+            
+        
+            
+            var popup_82d93ba9934d485b879879315a03760e = L.popup({maxWidth: '300'});
+
+            
+                var html_180280f6b75b458fa4bd3df5fcec2c1b = $('         <div id="html_180280f6b75b458fa4bd3df5fcec2c1b"                 style="width: 100.0%; height: 100.0%;">                 Good</div>                 ')[0];
+                popup_82d93ba9934d485b879879315a03760e.setContent(html_180280f6b75b458fa4bd3df5fcec2c1b);
+            
+
+            marker_042981549ff747cc99532e287149f28b.bindPopup(popup_82d93ba9934d485b879879315a03760e);
+
+            
+        
+        
+            
+
+            var marker_c48f23215b324165acaf9488ca9bfe51 = L.marker(
+                [39.74,-104.99],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_df06907821544c1fa2216c5045292158);
+            
+        
+            
+
+                var icon_61b5256cfc814a638e47b52206b4d4fc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c48f23215b324165acaf9488ca9bfe51.setIcon(icon_61b5256cfc814a638e47b52206b4d4fc);
+            
+        
+            
+            var popup_c1deef14088e4424bf4e07f380edb49d = L.popup({maxWidth: '300'});
+
+            
+                var html_157cccd90bdf499d965c94b05e87f39a = $('         <div id="html_157cccd90bdf499d965c94b05e87f39a"                 style="width: 100.0%; height: 100.0%;">                 Great</div>                 ')[0];
+                popup_c1deef14088e4424bf4e07f380edb49d.setContent(html_157cccd90bdf499d965c94b05e87f39a);
+            
+
+            marker_c48f23215b324165acaf9488ca9bfe51.bindPopup(popup_c1deef14088e4424bf4e07f380edb49d);
+
+            
+        
+        
+            
+
+            var marker_3b8562cb3cd74a648d2d942440d955a8 = L.marker(
+                [32.42,-117.9],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_df06907821544c1fa2216c5045292158);
+            
+        
+            
+
+                var icon_7231f8c4026e496fbc2c5b3352cc461b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3b8562cb3cd74a648d2d942440d955a8.setIcon(icon_7231f8c4026e496fbc2c5b3352cc461b);
+            
+        
+            
+            var popup_067cdafa00da44e48f15d8450ebe3a03 = L.popup({maxWidth: '300'});
+
+            
+                var html_92ca9629e2064f7d9ea8e3d0bc4bfebf = $('         <div id="html_92ca9629e2064f7d9ea8e3d0bc4bfebf"                 style="width: 100.0%; height: 100.0%;">                 Better</div>                 ')[0];
+                popup_067cdafa00da44e48f15d8450ebe3a03.setContent(html_92ca9629e2064f7d9ea8e3d0bc4bfebf);
+            
+
+            marker_3b8562cb3cd74a648d2d942440d955a8.bindPopup(popup_067cdafa00da44e48f15d8450ebe3a03);
+
+            
+        
+        
+            
+
+            var marker_109c91a09c704f709995d3715c154e6c = L.marker(
+                [47.29,19.2],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_df06907821544c1fa2216c5045292158);
+            
+        
+            
+
+                var icon_0c5afa5d19244bf0992ab43b1e23c5bc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_109c91a09c704f709995d3715c154e6c.setIcon(icon_0c5afa5d19244bf0992ab43b1e23c5bc);
+            
+        
+            
+            var popup_87997341575a4f00a8699d2b1c7a4434 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1e286e6330a4518a83bdd9e9d9897f0 = $('         <div id="html_f1e286e6330a4518a83bdd9e9d9897f0"                 style="width: 100.0%; height: 100.0%;">                 Best</div>                 ')[0];
+                popup_87997341575a4f00a8699d2b1c7a4434.setContent(html_f1e286e6330a4518a83bdd9e9d9897f0);
+            
+
+            marker_109c91a09c704f709995d3715c154e6c.bindPopup(popup_87997341575a4f00a8699d2b1c7a4434);
+
+            
+        
+        
+        
+        </script>
+        
