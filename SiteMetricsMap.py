@@ -34,7 +34,7 @@ buoy_map = folium.Map(
     tiles='Stamen Terrain'
     )
 
-folium.RegularPolygonMarker(
+#folium.RegularPolygonMarker(
     [47.3489, -124.708],
     fill_color='#43d9de',
     radius=12,
@@ -73,4 +73,4 @@ popup3 = folium.Popup(max_width=800,
                      ).add_child(folium.Vega(vis3, width=500, height=250))
 folium.RegularPolygonMarker([46.216, -124.1280],
                      fill_color='#43d9de', radius=12, popup=popup3).add_to(buoy_map)
-buoy_map.save('NOAA_buoys.html')
+buoy_map.save('buoys.html')
