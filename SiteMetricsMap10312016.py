@@ -6,47 +6,33 @@ def mapper(data):
     df = pd.read_csv(data)
 
     #draft map an location pins
-    map = folium.Map()
+    m = folium.Map()
 
     for each in df.iterrows():
-        map.simple_marker(
-            location = [each[1]['Lat'], each[1]['Lon']], popup=each[1]['Classification'])
+        m.circle_marker(location = [each[1]['Lat'], each[1]['Lon']], popup=each[1]['City'])
 
-    #user input to pop up information
+    m.create_map(path='map.html')
 
-#    import branca
-#    import os
+    m = folium.Map([43,-100], zoom_start=4)
 
-#    html = """
-#        <h1> This is a big popup</h1><br>
-#        With a few lines of code...
-#        <p>
-#        <code>
-#            from numpy import *<br>
-#            exp(-2*pi)
-#        </code>
-#        </p>
-#        """
+    html="""
+        <!DOCTYPE html>
+        <html>
+        <body>
+        <h1> This is a big popup</h1><br>
+        <div>
+        <img id="RC51" src="/Users/rogpaxton/Galvanize/SiteMetrics/small_jpeg.jpg" alt="RVT" style="width:48px;height:49px;">
+        </div>
+        </body>
+        </html>
+        """
+    iframe = folium.element.IFrame(html=html, width=500, height=300)
+#    iframe = folium.element.HTML(html=html, width=800, height=500)
+    popup = folium.Popup(iframe, max_width=2650)
 
-#    iframe = branca.element.IFrame(html=html, width=500, height=300)
-#    popup = folium.Popup(iframe, max_width=2650)
+    folium.Marker([30,-100], popup=popup).add_to(m)
 
-#    for each in df.iterrows():
-#        map.simple_marker(
-#            location = [each[1]['Lat'], each[1]['Lon']], popup=each[1]['Classification'])
-
-#    folium.Marker([30, -100], popup=popup).add_to(map)
-
-#    map.save(os.path.join('results', 'html_popups.html'))
-
-#    args = sys.argv
-
-
-
-
-
-
-    map.create_map(path='map.html')
+    m.create_map(path='map.html')
 
 if __name__ == '__main__':
     map1 = mapper('data/example.csv')
