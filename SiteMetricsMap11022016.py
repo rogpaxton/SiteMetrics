@@ -24,11 +24,12 @@ def mapper(data):
             <h1> Popup for site location</h1>
             <br>
             <div>
-                <img id="RC51" src="file:///Users/rogpaxton/Galvanize/SiteMetrics/RC51.jpg" alt="RVT" style="width:48px;height:49px;">
+                <img src="plot44.0.png" id="RC51" alt="RVT" style="width:400px;height:200px;">
             </div>
         </html>
         """
 
+#src="file:///Users/rogpaxton/Galvanize/SiteMetrics/RC51.jpg"
 #                    <img id="RC51" src="RC51.jpg" alt="RVT" style="width:48px;height:49px;">
 
     f.write(html)
@@ -37,6 +38,7 @@ def mapper(data):
     iframe = folium.element.IFrame(html=html, width=800, height=400)
 #    iframe = folium.element.HTML(html=html, width=800, height=500)
     popup = folium.Popup(iframe, max_width=2650)
+    print iframe
 
     folium.Marker([30,-100], popup=popup).add_to(m)
 
