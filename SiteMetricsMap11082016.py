@@ -15,7 +15,7 @@ def mapper(data):
             <h1> Site Metrics</h1>
             <br>
             <div>
-                <img src="plot44.0.png" id="RC51" alt="RVT" style="width:400px;height:200px;">
+                <img src="plot44.0.png" id="RC51" alt="RVT" style="width:800px;height:600px;">
             </div>
         </html>
         """
