@@ -9,7 +9,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 matplotlib.style.use('ggplot')
-from matplotlib.dates import MonthLocator, WeekdayLocator, DateFormatter
 
 def data_conditioner(filename):
 
@@ -45,42 +44,29 @@ def data_conditioner(filename):
         grid_row = 0
         count =1
         for j in events:
-#            plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%Y'))
-#            plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+            print j
 
             plt.subplot(2,4,count)
-            plt.tight_layout()
             df_site = df.loc[df['SiteId'] == i]
             df_event = df_site.loc[df['EventTypeId'] == j]
             df_sorted = df_event.sort_values(by='EventDateTime')
             df_sorted['EventDateTime'] = pd.to_datetime(df_sorted['EventDateTime'])
             df_sorted = df_sorted.set_index('EventDateTime')
             df_sorted['day'] = df_sorted.index.date
-
             counts =  df_sorted.groupby('day').size(); counts
             idx = pd.date_range(date_min, date_max)
             counts.index = pd.DatetimeIndex(counts.index)
             counts = counts.reindex(idx, fill_value = 0)
-            plt.tick_params(axis='both', which='major', labelsize=8, labelright='off', length = 0)
-            plt.tick_params(axis='both', which='minor', labelsize=8, labelright='off', length = 0)
-
             counts.plot()
             if counts.max() >= 10:
                 count_max = counts.max()
             else:
                 count_max = 10
-
             days = df_sorted['day'].tolist()
             axes = plt.gca()
-#            axes.get_xaxis().set_visible(False)
-            plt.setp(axes.get_xminorticklabels(), visible=False)
             axes.set_ylim([-1, count_max + 1])
-#            axes.set_xlabel('Date')
-#            axes.set_ylabel('Count')
-            plt.text(0.4, 0.5, 'common Y',  rotation='vertical')
-
-            color = 'r'
-            plt.title(event_type_id[j], size = 10)
+            plt.xlabel('Date')
+            plt.title(event_type_id[j])
             plt.locator_params(axis = 'y', nbins=4)
             count += 1
         filenumber = i
