@@ -37,7 +37,7 @@ def data_conditioner(filename):
         site_long[i] = df.ix[df.SiteId[df.SiteId == i].index.tolist()[0], 'SiteAddressLongitude']
 
     #Tabulate occurences of each event, in each category, for each day for each site
-    event_type_id = {1: 'Invitation Sent', 2: 'Registration', 3: 'Access Site', 4: 'Referral', 5: 'Question', 6: 'Accessed Document', 7: 'Interested', 8: 'Not Interested'}
+    event_type_id = {1: 'Metric 1', 2: 'Metric 2', 3: 'Metric 3', 4: 'Metric 4', 5: 'Metric 5', 6: 'Metric 6', 7: 'Metric 7', 8: 'Metric 8'}
     events = [1, 2, 3, 4, 5, 6, 7, 8]
     for i in list(site_set):
 #        figure = gridspec.GridSpec(2, 4)
