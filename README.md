@@ -12,3 +12,5 @@ Solution: SiteMetrics is a robust platform for conditioning data and providing d
 Purpose: SiteMetrics provides a powerful visualization tool for immediate and intuitive evaluation of job site performance.
 
 Future Directions: Moving forward, an algorithm will be integrated for prediction of site performance in discrete metrics, as well as overall performance.
+
+![alt tag](https://raw.githubusercontent.com/rogpaxton/SiteMetrics/master/plot44.0.png)
