@@ -13,4 +13,4 @@ Purpose: SiteMetrics provides a powerful visualization tool for immediate and in
 
 Future Directions: Moving forward, an algorithm will be integrated for prediction of site performance in discrete metrics, as well as overall performance.
 
-![alt tag](https://raw.githubusercontent.com/rogpaxton/SiteMetrics/master/plot44.0.png)
+![alt tag](https://raw.githubusercontent.com/rogpaxton/SiteMetrics/master/SiteMetricsExample.png)
